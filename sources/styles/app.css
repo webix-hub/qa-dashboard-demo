@@ -28,21 +28,6 @@
 	font-weight:bold;
 	display:block;
 }
-/* .stars.star0 {
-	background-image: url('../../data/stars00.gif');
+.stars{
+	display:block;
 }
-.stars.star1 {
-	background-image: url('../../data/stars01.gif');
-}
-.stars.star2 {
-	background-image: url('../../data/stars02.gif');
-}
-.stars.star3 {
-	background-image: url('../../data/stars03.gif');
-}
-.stars.star4 {
-	background-image: url('../../data/stars04.gif');
-}
-.stars.star5 {
-	background-image: url('../../data/stars05.gif');
-} */

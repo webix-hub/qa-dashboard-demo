@@ -22,6 +22,7 @@ export default class TopQAView extends JetView {
 								return common.userPic(obj)
 									+ common.money(obj)
 									+ common.stars(obj)
+									//+ "<span class='stars'>" + obj.stars + "</span>"
 									+ "<span class='qaname'>" + obj.name + "</span>"
 									+ obj.category;
 							},
@@ -34,8 +35,11 @@ export default class TopQAView extends JetView {
 										+ obj.name.charAt(0) + "</span>";
 							},
 							stars:obj => {
-								return "<span title='"+obj.stars
-								+"' class='star"+obj.stars+"'></span>";
+								let result = "";
+								for (let i = 1; i <= obj.stars; i++){
+									result += "*";
+								}
+								return "<span class='stars'>" + result + "</span>";
 							},
 							money:obj => "<span class='money'>$" + obj.money + "</span>"
 						}
