@@ -1,5 +1,7 @@
-Webix Jet Demo App
+Webix QA Dashboard (demo for the new skin)
 ===================
+
+Design is here: https://projects.invisionapp.com/d/main#/console/12386541/313827074/preview
 
 ### How to run
 
