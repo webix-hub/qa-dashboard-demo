@@ -8,14 +8,14 @@ export default class MenuView extends JetView {
 			view:"sidebar",
 			collapsed:true,
 			data:[
-				{ id:"services", value:"Services", icon:"shopping-cart" },
+				{ id:"services", value:"Services", icon:"cart" },
 				{ id:"qadashboard", value:"QA Dashboard", icon:"cube" },
-				{ id:"projects", value:"Best projects", icon:"code" },
-				{ id:"layout", value:"Layout", icon:"th-large" },
-				{ id:"statistics", value:"Statistics", icon:"area-chart" },
-				{ id:"typography", value:"Typography", icon:"align-justify" },
+				{ id:"projects", value:"Best projects", icon:"code-not-equal-variant" },
+				{ id:"layout", value:"Layout", icon:"view-dashboard" },
+				{ id:"statistics", value:"Statistics", icon:"chart-areaspline" },
+				{ id:"typography", value:"Typography", icon:"format-line-style" },
 				{ id:"events", value:"Events", icon:"calendar" },
-				{ id:"filemanager", value:"File Manager", icon:"folder" }
+				{ id:"filemanager", value:"File Manager", icon:"folder-star" }
 			]
 		};
 	}
