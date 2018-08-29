@@ -1,5 +1,6 @@
 import {JetView} from "webix-jet";
 import MenuView from "views/menu";
+import NotificationView from "views/notifications";
 
 export default class TopView extends JetView {
 	config(){
@@ -27,8 +28,9 @@ export default class TopView extends JetView {
 						{
 							view:"button", type:"icon", icon:"bell",
 							width:37, css:"toolbar_button",
-							click:() => {
-
+							tooltip:"Open latest notifications",
+							click: function(){
+								this.$scope.notifications.showLatest(this.$view);
 							}
 						},
 						{
@@ -48,5 +50,8 @@ export default class TopView extends JetView {
 				}
 			]
 		};
+	}
+	init(){
+		this.notifications = this.ui(NotificationView);
 	}
 }

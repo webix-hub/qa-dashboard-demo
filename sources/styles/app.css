@@ -58,3 +58,22 @@ path {
 .open{
 	color:#1CA1C1;
 }
+/* notifications */
+.notifications .webix_list_item{
+	line-height:20px;
+	padding:10px;
+}
+.notifications .webix_list_item .m_title{
+	font-weight: 500;
+}
+.notifications .webix_list_item .message{
+	display:block;
+}
+.link{
+	color:blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.unread{
+	color:#FF5C4C;
+}
