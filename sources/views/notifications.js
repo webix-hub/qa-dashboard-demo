@@ -11,7 +11,7 @@ export default class NotificationView extends JetView {
 						view:"list",
 						borderless:true,
 						css:"notifications",
-						width:250, height:350,
+						width:250, height:250,
 						template:(obj,common) => {
 							return (!obj.read ? common.itemNew() : "") +
 								"<span class='m_title'>" + obj.title + "</span>" +
@@ -19,11 +19,11 @@ export default class NotificationView extends JetView {
 						},
 						type:{
 							itemNew: () => "<span class='webix_icon mdi mdi-alert-decagram unread'></span>",
-							height:120
+							height:55
 						}
 					},
 					{
-						template:"<a class='link' route='top/snippets'>See all notifications</a>",
+						template:"<a class='link' route='top/projects'>See all notifications</a>",
 						autoheight:true, borderless:true
 					}
 				]

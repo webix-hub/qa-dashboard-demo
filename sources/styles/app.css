@@ -68,6 +68,7 @@ path {
 }
 .notifications .webix_list_item .message{
 	display:block;
+	color:#94A1B3;
 }
 .link{
 	color:blue;

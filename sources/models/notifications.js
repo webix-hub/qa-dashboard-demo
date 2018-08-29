@@ -1,7 +1,9 @@
 export const notifications = new webix.DataCollection({
 	data:[
-		{ title:"Deposits News", message:"Dear client, we inform you about the following changes: beginning from September 24, 2018 all transactions (incoming and out...", read:0 },
-		{ title:"Search Improved", message:"Dear client! Following the latest updates of the SeekMeEverywhere engines, your search has become more reliable and convenient! No...", read:0 },
-		{ title:"Transaction Reports", message:"Dear client, we inform you about a change in the date of monthly transaction reports. Beginning from September 20, 2018 reports...", read:1 }
+		{ title:"Latest tickets", message:"Top margin in a popup window is smaller than the...", read:0 },
+		{ title:"Tickets report", message:"Button text on mobile devices", read:0 },
+		{ title:"Assignment", message:"Emily Kaldwin assigned you a new ticket", read:1 },
+		{ title:"Daisy Fitzroy added new tasks", message:"'Confirm' button styling", read:1 },
+		{ title:"Tickets report", message:"No ability to exit profile editing dialogue", read:1 }
 	]
 });
