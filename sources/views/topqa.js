@@ -14,7 +14,7 @@ export default class TopQAView extends JetView {
 					body:{
 						view:"dataview",
 						css:"qacards",
-						xCount:3, yCount:3,
+						xCount:3,
 						select:true,
 						type:{
 							width:"auto", 
