@@ -15,16 +15,16 @@ export default class TopQAView extends JetView {
 						view:"dataview",
 						css:"qacards",
 						xCount:3, yCount:3,
+						select:true,
 						type:{
 							width:"auto", 
 							height:85,
 							template:(obj,common) => {
-								return common.userPic(obj)
+								return "<div class='card'>" + common.userPic(obj)
 									+ common.money(obj)
 									+ common.stars(obj)
-									//+ "<span class='stars'>" + obj.stars + "</span>"
 									+ "<span class='qaname'>" + obj.name + "</span>"
-									+ obj.category;
+									+ obj.category + "</div>";
 							},
 							userPic:obj => {
 								if (obj.photo)
@@ -36,8 +36,9 @@ export default class TopQAView extends JetView {
 							},
 							stars:obj => {
 								let result = "";
-								for (let i = 1; i <= obj.stars; i++){
-									result += "*";
+								for (let i = 1; i <= 5; i++){
+									let color = (i <= obj.stars) ? "gold" : "grey";
+									result += `<span class='webix_icon mdi mdi-star star_${color}'></span>`;
 								}
 								return "<span class='stars'>" + result + "</span>";
 							},

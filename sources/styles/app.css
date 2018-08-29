@@ -1,16 +1,22 @@
+/* toolbar */
 .toolbar_button button{
 	padding:0;
 	text-align:center;
 }
-.qacards .webix_dataview_item{
-	line-height: 24px;
-	padding-top:10px;
+.webix_el_label.main_label{
+	line-height:40px;
+}
+/* dataview with qa cards */
+.qacards .webix_dataview_item, .qacards .webix_dataview_item.webix_selected{
+	padding:12px;
+	line-height:20px;
+	font-size:14px;
 }
 .userphoto, .userpic{
-	width:60px;
-	height:60px;
+	width:65px;
+	height:65px;
 	float:left;
-	margin:0px 10px 10px 0px;
+	margin:-2px 10px -2px -2px;
 }
 .userpic{
 	background-color:#1a73c7;
@@ -21,13 +27,34 @@
 }
 .money{
 	float:right;
-	color:#aaa;
+	font-weight:500;
 	display:block;
+	font-size:16px;
 }
 .qaname{
-	font-weight:bold;
+	font-weight:500;
 	display:block;
 }
 .stars{
 	display:block;
+}
+.star_gold{
+	color:#FDBF4C;
+}
+.star_grey{
+	color:#94A1B3;
+}
+/* geochart */
+path {
+    stroke:#D9D8D7;
+}
+/* grid */
+.pending{
+	color:#E2574C;
+}
+.complete{
+	color:#55CD97;
+}
+.open{
+	color:#1CA1C1;
 }

@@ -6,16 +6,38 @@ export default class TopView extends JetView {
 		return {
 			rows:[
 				{
-					view:"toolbar", elements:[
+					view:"toolbar", height:56,
+					elements:[
 						{
 							view:"button", type:"icon", icon:"menu",
 							width:37, css:"toolbar_button",
 							click:() => this.app.callEvent("menu:toggle")
 						},
 						{
-							view:"label", template:"QA Dashboard"
+							view:"label", template:"QA Dashboard", css:"main_label"
 						},
-						{}
+						{},
+						{
+							view:"button", type:"icon", icon:"information",
+							width:37, css:"toolbar_button",
+							click:() => {
+
+							}
+						},
+						{
+							view:"button", type:"icon", icon:"bell",
+							width:37, css:"toolbar_button",
+							click:() => {
+
+							}
+						},
+						{
+							view:"button", type:"icon", icon:"settings",
+							width:37, css:"toolbar_button",
+							click:() => {
+
+							}
+						}
 					]
 				},
 				{

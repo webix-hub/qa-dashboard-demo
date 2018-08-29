@@ -1,11 +1,14 @@
 export const qateam = [
-	{"name":"Bethânia Blakeslee","stars":5,"money":20,"category":"Automation","photo":""},
-	{"name":"Walter Edwardson","stars":4,"money":23,"category":"Product Quality Assurance","photo":""},
-	{"name":"Tegan Shepherd","stars":5,"money":21,"category":"Management","photo":""},
-	{"name":"Aser Antić","stars":4,"money":23,"category":"Test Execution Engine","photo":""},
-	{"name":"Irine Deadman","stars":4,"money":39,"category":"Automation","photo":""},
-	{"name":"Ajeet Righi","stars":4,"money":22,"category":"Management","photo":""},
-	{"name":"Crescentia Stack","stars":3,"money":28,"category":"Test Execution Engine","photo":""},
-	{"name":"Valens Wolff","stars":5,"money":29,"category":"Test Execution Engine","photo":""},
-	{"name":"Nontle Anker","stars":3,"money":39,"category":"Test Execution Engine","photo":""}
+	{"name":"Daisy Fitzroy","stars":5,"money":20,"category":"Automation","photo":"daisy"},
+	{"name":"Corvo Attano","stars":4,"money":23,"category":"Product Quality Assurance","photo":"corvo"},
+	{"name":"Tegan Shepherd","stars":5,"money":21,"category":"Management","photo":"tegan"},
+	{"name":"Aser Antić","stars":4,"money":23,"category":"Test Execution Engine","photo":"aser"},
+	{"name":"Elizabeth DeWitt","stars":4,"money":39,"category":"Automation","photo":"elizabeth"},
+	{"name":"Ajeet Righi","stars":4,"money":22,"category":"Management","photo":"ajeet"},
+	{"name":"Crescentia Stack","stars":3,"money":28,"category":"Test Execution Engine","photo":"crescentia"},
+	{"name":"Valens Wolff","stars":5,"money":29,"category":"Test Execution Engine","photo":"valens"},
+	{"name":"Morgan Yu","stars":5,"money":39,"category":"Test Execution Engine","photo":"morgan"},
+	{"name":"Jim Jones","stars":3,"money":33,"category":"Management","photo":"jim"},
+	{"name":"Emily Kaldwin","stars":5,"money":32,"category":"Automation","photo":"emily"},
+	{"name":"William Price","stars":4,"money":41,"category":"Product Quality Assurance","photo":"william"}
 ];

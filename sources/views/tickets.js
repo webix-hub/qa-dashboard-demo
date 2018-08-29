@@ -9,13 +9,15 @@ export default class Tickets extends JetView {
 				{ type:"header", template:"Recent tickets" },
 				{
 					view:"datatable",
+					select:true,
 					columns:[
-						{ id:"id", header:"#", width:40 },
-						{ id:"time", header:"Date", adjust:"data" },
-						{ id:"name", header:"Bug", fillspace:2 },
+						{ id:"time", header:"Date", fillspace:1 },
+						{ id:"name", header:"Bug", fillspace:4 },
 						{
 							id:"status", header:"Status", fillspace:1,
-							template:obj => "&#9679; " + obj.status
+							template:obj => {
+								return `<span class='${obj.status.toLowerCase()}'>&#9679; ${obj.status}</span>`;
+							}
 						}
 					]
 				}

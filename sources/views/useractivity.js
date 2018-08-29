@@ -17,7 +17,9 @@ export default class UserActivityView extends JetView {
 						colorAxis:{
 							colors:geocolors
 						},
-						legend:"none"
+						legend:"none",
+						datalessRegionColor:"#D9D8D7",
+						projection:"kavrayskiy-vii"
 					}
 				}
 			]
