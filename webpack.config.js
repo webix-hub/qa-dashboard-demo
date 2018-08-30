@@ -46,8 +46,7 @@ module.exports = function(env) {
 			extensions: [".js"],
 			modules: ["./sources", "node_modules"],
 			alias:{
-				"jet-views":path.resolve(__dirname, "sources/views"),
-				"jet-locales":path.resolve(__dirname, "sources/locales")
+				"jet-views":path.resolve(__dirname, "sources/views")
 			}
 		},
 		plugins: [
@@ -59,7 +58,8 @@ module.exports = function(env) {
 				APPNAME: `"${pack.name}"`,
 				PRODUCTION : production,
 				BUILD_AS_MODULE : (asmodule || standalone)
-			})
+			}),
+			new webpack.IgnorePlugin(/jet-locales/)
 		],
 		devServer:{
 			stats:"errors-only"
