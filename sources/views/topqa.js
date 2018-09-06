@@ -19,7 +19,7 @@ export default class TopQAView extends JetView {
 						type:{
 							width:"auto", 
 							height:93,
-							// templateStart:webix.template("<div webix_l_id='#id#' class='card'>"),
+							// templateStart:webix.template('<div webix_l_id="#id#" class="{common.classname()} card" {common.aria()} style="width:31%; height:{common.height}px; float:left; overflow:hidden;">'),
 							template:(obj,common) => {
 								return common.userPic(obj)
 									+ common.money(obj)

@@ -10,7 +10,7 @@
 	font-size:14px;
 	color:#475466;
 }
-.card{
+/* .webix_dataview_item.card,{
 	width:29%;
     height:70px;
 	border:1px solid #DADEE0;
@@ -19,7 +19,7 @@
     overflow:hidden;
 	padding:12px;
 	float:left;
-}
+} */
 .userphoto, .userpic{
 	width:72px;
 	height:72px;
