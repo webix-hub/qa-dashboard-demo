@@ -1,20 +1,27 @@
 /* toolbar */
-.toolbar_button button{
-	padding:0;
-	text-align:center;
-}
 .webix_el_label.main_label{
 	line-height:40px;
 }
 /* dataview with qa cards */
-.qacards .webix_dataview_item, .qacards .webix_dataview_item.webix_selected{
+.qacards .webix_dataview_item,
+.qacards .webix_dataview_item.webix_selected{
 	padding:12px;
 	line-height:20px;
 	font-size:14px;
 }
+.card{
+	width:29%;
+    height:70px;
+	border:1px solid #DADEE0;
+	line-height:20px;
+    margin:5px 5px;
+    overflow:hidden;
+	padding:12px;
+	float:left;
+}
 .userphoto, .userpic{
-	width:65px;
-	height:65px;
+	width:72px;
+	height:72px;
 	float:left;
 	margin:-2px 10px -2px -2px;
 }
@@ -40,6 +47,7 @@
 }
 .star_gold{
 	color:#FDBF4C;
+	margin-right:-3px;
 }
 .star_grey{
 	color:#94A1B3;
@@ -49,6 +57,9 @@ path {
     stroke:#D9D8D7;
 }
 /* grid */
+.status{
+	font-weight:500;
+}
 .pending{
 	color:#E2574C;
 }
@@ -59,7 +70,8 @@ path {
 	color:#1CA1C1;
 }
 /* notifications */
-.notifications .webix_list_item{
+.notifications .webix_list_item,
+.notifications .webix_list_item.webix_selected{
 	line-height:20px;
 	padding:10px;
 }

@@ -16,7 +16,7 @@ export default class Tickets extends JetView {
 						{
 							id:"status", header:"Status", fillspace:1,
 							template:obj => {
-								return `<span class='${obj.status.toLowerCase()}'>&#9679; ${obj.status}</span>`;
+								return `<span class='status ${obj.status.toLowerCase()}'>&#9679; ${obj.status}</span>`;
 							}
 						}
 					]

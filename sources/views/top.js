@@ -10,8 +10,7 @@ export default class TopView extends JetView {
 					view:"toolbar", height:56,
 					elements:[
 						{
-							view:"button", type:"icon", icon:"menu",
-							width:37, css:"toolbar_button",
+							view:"icon", icon:"menu",
 							click:() => this.app.callEvent("menu:toggle")
 						},
 						{
@@ -19,23 +18,17 @@ export default class TopView extends JetView {
 						},
 						{},
 						{
-							view:"button", type:"icon", icon:"information",
-							width:37, css:"toolbar_button",
-							click:() => {
-
-							}
-						},
-						{
-							view:"button", type:"icon", icon:"bell",
-							badge:2, width:37, css:"toolbar_button",
+							view:"icon", icon:"bell",
+							badge:2,
 							tooltip:"Open latest notifications",
 							click: function(){
 								this.$scope.notifications.showLatest(this.$view);
 							}
 						},
 						{
-							view:"button", type:"icon", icon:"theme-light-dark",
-							width:37, css:"toolbar_button", tooltip:"Come to the dark side",
+							view:"icon",
+							icon:"theme-light-dark",
+							tooltip:"Come to the dark side",
 							click:function(){
 								let theme = "light";
 								if (this.config.tooltip.indexOf("dark") !== -1) {

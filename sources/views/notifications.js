@@ -9,6 +9,8 @@ export default class NotificationView extends JetView {
 				rows:[
 					{
 						view:"list",
+						localId:"list",
+						select:true,
 						borderless:true,
 						css:"notifications",
 						width:250, height:250,
@@ -23,18 +25,17 @@ export default class NotificationView extends JetView {
 						}
 					},
 					{
-						template:"<a class='link' route='top/projects'>See all notifications</a>",
+						template:"<a class='link'>See all notifications</a>",
 						autoheight:true, borderless:true
 					}
 				]
 			}
 		};
 	}
-	init(view){
-		view.queryView({view:"list"}).sync(notifications);
+	init(){
+		this.$$("list").sync(notifications);
 	}
 	showLatest(pos){
 		this.getRoot().show(pos);
-		//this.app.callEvent("read:notifications");
 	}
 }

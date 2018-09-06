@@ -18,14 +18,16 @@ export default class TopQAView extends JetView {
 						select:true,
 						type:{
 							width:"auto", 
-							height:85,
+							height:93,
+							// templateStart:webix.template("<div webix_l_id='#id#' class='card'>"),
 							template:(obj,common) => {
-								return "<div class='card'>" + common.userPic(obj)
+								return common.userPic(obj)
 									+ common.money(obj)
 									+ common.stars(obj)
 									+ "<span class='qaname'>" + obj.name + "</span>"
-									+ obj.category + "</div>";
+									+ obj.category;
 							},
+							// templateEnd:webix.template("</div>"),
 							userPic:obj => {
 								if (obj.photo)
 									return "<image class='userphoto' src='data/photos/"

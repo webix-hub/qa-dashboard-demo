@@ -1,6 +1,5 @@
 import {JetView} from "webix-jet";
-import {users} from "models/useractivity";
-import {geocolors} from "helpers/geocolors";
+import {getUserActivity} from "models/useractivity";
 
 export default class UserActivityView extends JetView {
 	config(){
@@ -10,12 +9,13 @@ export default class UserActivityView extends JetView {
 				{ type:"header", template:"User activity" },
 				{
 					view:"geochart",
+					localId:"geo",
 					// provide your own Google API key 
 					// https://developers.google.com/maps/documentation/javascript/get-api-key
 					key:"AIzaSyAi0oVNVO-e603aUY8SILdD4v9bVBkmiTg",
 					chart:{
 						colorAxis:{
-							colors:geocolors
+							colors:[  "#FDBF4C", "#1CA1C1", "#FF5C4C" ]
 						},
 						legend:"none",
 						datalessRegionColor:"#D9D8D7",
@@ -25,7 +25,7 @@ export default class UserActivityView extends JetView {
 			]
 		};
 	}
-	init(view){
-		view.queryView({ view:"geochart" }).parse(users);
+	init(){
+		this.$$("geo").parse(getUserActivity());
 	}
 }

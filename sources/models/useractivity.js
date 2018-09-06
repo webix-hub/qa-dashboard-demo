@@ -1,27 +1,9 @@
-export const users = [
-	{ id:"1", country:"Albania", users:10 },
-	{ id:"2", country:"Argentina", users:20 },
-	{ id:"3", country:"Australia", users:30 },
-	{ id:"4", country:"Austria", users:40 },
-	{ id:"5", country:"Belarus", users:50 },
-	{ id:"6", country:"Belgium", users:60 },
+export function getUserActivity(){
+	return users;
+}
+
+const users = [
 	{ id:"7", country:"Brazil", users:70 },
 	{ id:"8", country:"Canada", users:80 },
-	{ id:"9", country:"China", users:90 },
-	{ id:"10", country:"Czech Republic", users:100 },
-	{ id:"11", country:"Denmark", users:110 },
-	{ id:"12", country:"Egypt", users:120 },
-	{ id:"13", country:"Finland", users:130 },
-	{ id:"14", country:"France", users:140 },
-	{ id:"15", country:"Georgia", users:150 },
-	{ id:"16", country:"Germany", users:160 },
-	{ id:"17", country:"India", users:170 },
-	{ id:"18", country:"Ireland", users:180 },
-	{ id:"19", country:"Italy", users:190 },
-	{ id:"20", country:"Japan", users:200 },
-	{ id:"21", country:"New Zealand", users:210 },
-	{ id:"22", country:"Republic of Korea", users:220 },
-	{ id:"23", country:"Spain", users:230 },
-	{ id:"24", country:"Sweden", users:240 },
-	{ id:"25", country:"United States", users:250 }
+	{ id:"9", country:"China", users:90 }
 ];
