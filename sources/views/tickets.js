@@ -25,7 +25,7 @@ export default class TicketsView extends JetView {
 			]
 		};
 	}
-	init(view){
+	init(){
 		this.$$("datatable").parse(getTickets());
 	}
 }
