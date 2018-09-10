@@ -12,10 +12,10 @@ export default class TicketsView extends JetView {
 					localId:"datatable",
 					select:true,
 					columns:[
-						{ id:"time", header:"Date", fillspace:1 },
-						{ id:"name", header:"Bug", fillspace:4 },
+						{ id:"time", header:"Date", fillspace:1, sort:"string" },
+						{ id:"name", header:"Bug", fillspace:4, sort:"string" },
 						{
-							id:"status", header:"Status", fillspace:1,
+							id:"status", header:"Status", fillspace:1, sort:"string",
 							template:obj => {
 								return `<span class='status ${obj.status.toLowerCase()}'>&#9679; ${obj.status}</span>`;
 							}
