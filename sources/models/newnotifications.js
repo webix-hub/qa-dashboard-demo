@@ -20,7 +20,7 @@ const notifications = [
 	},
 	{
 		title:"Have a nice day",
-		message:"Dear client, whenever you are reading this, we wish you a merry day. May the luck and success attend you.",
+		message:"Dear client, whenever you are reading this, we wish you a merry day. May luck and success attend you.",
 		read:0
 	},
 	{
