@@ -26,7 +26,8 @@ export default class TopView extends JetView {
 										},
 										{},
 										{
-											view:"icon", icon:"bell", badge:2,
+											view:"icon", icon:"bell",
+											badge:2, localId:"bell",
 											tooltip:"Open latest notifications",
 											click:function(){
 												this.$scope.notifications.showWin(this.$view);
@@ -67,5 +68,16 @@ export default class TopView extends JetView {
 		const theme = this.app.config.theme;
 		this.$$("themes").config.tooltip = theme ? "Come back to the light side of the Force" : "Come to the dark side";
 		this.$$("themes").refresh();
+
+		this.on(this.app,"read:notifications",() => {
+			this.$$("bell").config.badge = 0;
+			this.$$("bell").refresh();
+
+			setTimeout(() => {
+				this.$$("bell").config.badge += 1;
+				this.$$("bell").refresh();
+				this.app.callEvent("new:notification");
+			},10000);
+		});
 	}
 }
