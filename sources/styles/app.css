@@ -88,3 +88,7 @@ path {
 .unread{
 	color:#FF5C4C;
 }
+/* iframes */
+.webix_view.ifr_template .webix_template{
+	padding:0px;
+}
