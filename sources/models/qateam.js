@@ -1,4 +1,8 @@
-export const qateam = [
+export function getQATeam(){
+	return qateam;
+}
+
+const qateam = [
 	{"name":"Daisy Fitzroy","stars":5,"money":20,"category":"Automation","photo":"daisy"},
 	{"name":"Corvo Attano","stars":4,"money":23,"category":"Product Quality Assurance","photo":"corvo"},
 	{"name":"Leia Organa","stars":5,"money":21,"category":"Management","photo":"leia"},

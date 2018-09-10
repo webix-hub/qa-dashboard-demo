@@ -2,10 +2,12 @@ import {JetView, plugins} from "webix-jet";
 
 export default class MenuView extends JetView {
 	config(){
+		const theme = this.app.config.theme;
 		return {
 			width:150,
 			localId:"side:menu",
 			view:"sidebar",
+			css:theme,
 			collapsed:true,
 			data:[
 				{ id:"qadashboard", value:"QA Dashboard", icon:"cube" },

@@ -1,9 +1,9 @@
 import {JetView} from "webix-jet";
 import TopQAView from "views/topqa";
 import UserActivityView from "views/useractivity";
-import Tickets from "views/tickets";
+import TicketsView from "views/tickets";
 
-export default class QADashboard extends JetView {
+export default class QADashboardView extends JetView {
 	config(){
 		return {
 			type:"space", cols:[
@@ -15,7 +15,7 @@ export default class QADashboard extends JetView {
 						UserActivityView
 					]
 				},
-				Tickets
+				TicketsView
 			]
 		};
 	}

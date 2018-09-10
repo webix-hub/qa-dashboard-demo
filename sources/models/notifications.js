@@ -1,4 +1,8 @@
-export const notifications = new webix.DataCollection({
+export function getNotifications(){
+	return notifications;
+}
+
+const notifications = new webix.DataCollection({
 	data:[
 		{ title:"Latest tickets", message:"Top margin in a popup window is smaller than the...", read:0 },
 		{ title:"Tickets report", message:"Button text on mobile devices", read:0 },

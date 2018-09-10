@@ -1,7 +1,7 @@
 import {JetView} from "webix-jet";
-import {tickets} from "models/tickets";
+import {getTickets} from "models/tickets";
 
-export default class Tickets extends JetView {
+export default class TicketsView extends JetView {
 	config(){
 		return {
 			gravity:2,
@@ -9,6 +9,7 @@ export default class Tickets extends JetView {
 				{ type:"header", template:"Recent tickets" },
 				{
 					view:"datatable",
+					localId:"datatable",
 					select:true,
 					columns:[
 						{ id:"time", header:"Date", fillspace:1 },
@@ -25,6 +26,6 @@ export default class Tickets extends JetView {
 		};
 	}
 	init(view){
-		view.queryView({ view:"datatable" }).parse(tickets);
+		this.$$("datatable").parse(getTickets());
 	}
 }

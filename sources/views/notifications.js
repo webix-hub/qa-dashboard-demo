@@ -1,7 +1,7 @@
 import {JetView} from "webix-jet";
-import {notifications} from "models/notifications";
+import {getNotifications} from "models/notifications";
 
-export default class NotificationView extends JetView {
+export default class NotificationsView extends JetView {
 	config(){
 		return {
 			view:"popup",
@@ -33,9 +33,9 @@ export default class NotificationView extends JetView {
 		};
 	}
 	init(){
-		this.$$("list").sync(notifications);
+		this.$$("list").sync(getNotifications());
 	}
-	showLatest(pos){
+	showWin(pos){
 		this.getRoot().show(pos);
 	}
 }

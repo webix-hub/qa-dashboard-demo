@@ -1,4 +1,8 @@
-export const tickets = [
+export function getTickets(){
+	return tickets;
+}
+
+const tickets = [
 	{"id":1,"time":"1:36 PM","name":"Top margin in a popup window is smaller than the...","status":"Open"},
 	{"id":2,"time":"6:32 PM","name":"Button text on mobile devices","status":"Pending"},
 	{"id":3,"time":"2:18 AM","name":"Search pattern is ambiguous","status":"Complete"},

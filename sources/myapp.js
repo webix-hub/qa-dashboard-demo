@@ -9,11 +9,7 @@ export default class MyApp extends JetApp{
 			router 	: BUILD_AS_MODULE ? EmptyRouter : HashRouter,
 			debug 	: !PRODUCTION,
 			start 	: "/top/qadashboard",
-			views:{
-				"alltactions":"transactions.alltactions",
-				"payments":"transactions.payments",
-				"incoming":"transactions.incoming"
-			}
+			theme	: webix.storage.local.get("theme_qadashboard") || ""
 		};
 
 		super({ ...defaults, ...config });
@@ -22,7 +18,7 @@ export default class MyApp extends JetApp{
 
 if (!BUILD_AS_MODULE){
 	webix.ready(() => {
-		if (!webix.env.touch && webix.ui.scrollSize)
+		if (!webix.env.touch && webix.ui.scrollSize && webix.CustomScroll)
 			webix.CustomScroll.init();
 		new MyApp().render();
 	});

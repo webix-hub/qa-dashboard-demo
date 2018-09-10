@@ -1,5 +1,5 @@
 import {JetView} from "webix-jet";
-import {qateam} from "models/qateam";
+import {getQATeam} from "models/qateam";
 
 export default class TopQAView extends JetView {
 	config(){
@@ -13,6 +13,7 @@ export default class TopQAView extends JetView {
 					view:"scrollview",
 					body:{
 						view:"dataview",
+						localId:"dataview",
 						css:"qacards",
 						xCount:3,
 						select:true,
@@ -51,7 +52,7 @@ export default class TopQAView extends JetView {
 			]
 		};
 	}
-	init(view){
-		view.queryView({ view:"dataview" }).parse(qateam);
+	init(){
+		this.$$("dataview").parse(getQATeam());
 	}
 }
