@@ -17,11 +17,11 @@ export default class NotificationsView extends JetView {
 						width:250, height:250,
 						template:(obj,common) => {
 							return (!obj.read ? common.itemNew() : "") +
-								"<span class='m_title'>" + obj.title + "</span>" +
+								"<span class='m_title" + (!obj.read ? " unread" : "") + "'>" + obj.title + "</span>" +
 								"<span class='message'>" + obj.message + "</span>";
 						},
 						type:{
-							itemNew: () => "<span class='webix_icon mdi mdi-alert-decagram unread'></span>",
+							itemNew:() => "<span class='webix_icon mdi mdi-alert-decagram unread'></span>",
 							height:"auto"
 						}
 					},
