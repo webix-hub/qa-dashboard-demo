@@ -52,7 +52,8 @@ export default class TopView extends JetView {
 									]
 								}
 							]
-						}
+						},
+						{ width:6 }
 					]
 				},
 				{
