@@ -23,7 +23,7 @@ export default class TopQAView extends JetView {
 							// templateStart:webix.template('<div webix_l_id="#id#" class="{common.classname()} card" {common.aria()} style="width:31%; height:{common.height}px; float:left; overflow:hidden;">'),
 							template:(obj,common) => {
 								return common.userPic(obj)
-									+ common.money(obj)
+									+ common.level(obj)
 									+ common.stars(obj)
 									+ "<span class='qaname'>" + obj.name + "</span>"
 									+ obj.category;
@@ -45,7 +45,7 @@ export default class TopQAView extends JetView {
 								}
 								return "<span class='stars'>" + result + "</span>";
 							},
-							money:obj => "<span class='money'>$" + obj.money + "</span>"
+							level:obj => `<span class="level ${obj.level}">${obj.level}</span>`
 						}
 					}
 				}

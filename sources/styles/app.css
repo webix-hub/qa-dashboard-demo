@@ -29,11 +29,21 @@
 	line-height:55px;
 	font-size:33px;
 }
-.money{
+.level{
 	float:right;
 	font-weight:500;
 	display:block;
-	font-size:16px;
+	font-size:12px;
+	line-height:12px;
+}
+.junior{
+	color:#1CA1C1;
+}
+.middle{
+	color:#FDBF4C;
+}
+.senior{
+	color:#FF5C4C;
 }
 .qaname{
 	font-weight:500;
