@@ -18,7 +18,7 @@ export default class TopView extends JetView {
 								{
 									cols:[
 										{
-											view:"icon", icon:"menu",
+											view:"icon", icon:"mdi mdi-menu",
 											click:() => this.app.callEvent("menu:toggle")
 										},
 										{
@@ -26,7 +26,7 @@ export default class TopView extends JetView {
 										},
 										{},
 										{
-											view:"icon", icon:"bell",
+											view:"icon", icon:"mdi mdi-bell",
 											badge:2, localId:"bell",
 											tooltip:"Open latest notifications",
 											click:function(){
@@ -36,7 +36,7 @@ export default class TopView extends JetView {
 										{
 											view:"icon",
 											localId:"themes",
-											icon:"theme-light-dark",
+											icon:"mdi mdi-theme-light-dark",
 											color:theme,
 											click:function(){
 												let color = this.config.color;

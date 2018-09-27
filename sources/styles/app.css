@@ -1,26 +1,15 @@
 /* dataview with qa cards */
-.qacards .webix_dataview_item,
-.qacards .webix_dataview_item.webix_selected{
-	padding:12px;
+.webix_dataview .webix_dataview_item.tiles .webix_dataview_inner_item{
+	padding:11px;
 	line-height:20px;
 	font-size:14px;
 	color:#475466;
 }
-/* .webix_dataview_item.card,{
-	width:29%;
-    height:70px;
-	border:1px solid #DADEE0;
-	line-height:20px;
-    margin:5px 5px;
-    overflow:hidden;
-	padding:12px;
-	float:left;
-} */
 .userphoto, .userpic{
 	width:72px;
 	height:72px;
 	float:left;
-	margin:-2px 10px -2px -2px;
+	margin-right: 8px;
 }
 .userpic{
 	background-color:#1a73c7;

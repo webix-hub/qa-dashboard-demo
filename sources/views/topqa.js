@@ -14,13 +14,12 @@ export default class TopQAView extends JetView {
 					body:{
 						view:"dataview",
 						localId:"dataview",
-						css:"qacards",
 						xCount:3,
 						select:true,
 						type:{
 							width:"auto", 
-							height:93,
-							// templateStart:webix.template('<div webix_l_id="#id#" class="{common.classname()} card" {common.aria()} style="width:31%; height:{common.height}px; float:left; overflow:hidden;">'),
+							height:104,
+							type:"tiles",
 							template:(obj,common) => {
 								return common.userPic(obj)
 									+ common.level(obj)
@@ -28,7 +27,6 @@ export default class TopQAView extends JetView {
 									+ "<span class='qaname'>" + obj.name + "</span>"
 									+ obj.category;
 							},
-							// templateEnd:webix.template("</div>"),
 							userPic:obj => {
 								if (obj.photo)
 									return "<image class='userphoto' src='data/photos/"
