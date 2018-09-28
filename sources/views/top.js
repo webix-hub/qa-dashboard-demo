@@ -33,10 +33,11 @@ export default class TopView extends JetView {
 												this.$scope.notifications.showWin(this.$view);
 											}
 										},
+										{width:8},
 										{
 											view:"icon",
 											localId:"themes",
-											icon:"mdi mdi-theme-light-dark",
+											icon:"mdi mdi-invert-colors",
 											color:theme,
 											click:function(){
 												let color = this.config.color;
