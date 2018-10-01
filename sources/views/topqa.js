@@ -22,7 +22,7 @@ export default class TopQAView extends JetView {
 							type:"tiles",
 							template:(obj,common) => {
 								return common.userPic(obj)
-									+ common.level(obj)
+									+ common.tasks(obj)
 									+ common.stars(obj)
 									+ "<span class='qaname'>" + obj.name + "</span>"
 									+ obj.category;
@@ -43,7 +43,7 @@ export default class TopQAView extends JetView {
 								}
 								return "<span class='stars'>" + result + "</span>";
 							},
-							level:obj => `<span class="level ${obj.level}">${obj.level}</span>`
+							tasks:obj => `<span class="tasks">${obj.tasks}</span>`
 						}
 					}
 				}
@@ -51,6 +51,25 @@ export default class TopQAView extends JetView {
 		};
 	}
 	init(){
-		this.$$("dataview").parse(getQATeam());
+		const dataview = this.$$("dataview");
+
+		dataview.parse(getQATeam());
+
+		dataview.waitData.then(() => {
+			this._tooltip = webix.ui({
+				view:"tooltip",
+				template:"#value#"
+			});
+
+			let tasks = dataview.$view.querySelectorAll(".tasks");
+			for (let i = 0; i < tasks.length; i++){
+				webix.event(tasks[i],"mouseover",(e) => {
+					this._tooltip.show({ value:"Tasks completed" }, webix.html.pos(e));
+				});
+				webix.event(tasks[i],"mouseout",() => {
+					this._tooltip.hide();
+				});
+			}
+		});	
 	}
 }
