@@ -18,7 +18,8 @@ export default class TopView extends JetView {
 								{
 									cols:[
 										{
-											view:"icon", icon:"mdi mdi-menu",
+											view:"icon",
+											icon:"mdi mdi-menu",
 											click:() => this.app.callEvent("menu:toggle")
 										},
 										{
@@ -26,8 +27,10 @@ export default class TopView extends JetView {
 										},
 										{},
 										{
-											view:"icon", icon:"mdi mdi-bell",
-											badge:2, localId:"bell",
+											view:"icon",
+											icon:"mdi mdi-bell",
+											badge:5,
+											localId:"bell",
 											tooltip:"Open latest notifications",
 											click:function(){
 												this.$scope.notifications.showWin(this.$view);
