@@ -21,32 +21,36 @@ export default class NotificationsView extends JetView {
 								"<span class='message'>" + obj.message + "</span>";
 						},
 						type:{
-							height:80
-						},
-						data:[
-							{ title:"Latest tickets", message:"Top margin in a popup window is smaller than the..." },
-							{ title:"Tickets report", message:"Button text on mobile devices" },
-							{ title:"Assignment", message:"Emily Kaldwin assigned you a new ticket" },
-							{ title:"Daisy Fitzroy added new tasks", message:"'Confirm' button styling" },
-							{ title:"Tickets report", message:"No ability to exit profile editing dialogue" }
-						]
+							height:100
+						}
 					}
 				]
 			},
 			on:{
 				onHide:() => {
+					const list = this.$$("list");
+					list.clearAll();
+					list.showOverlay("<div style='margin:20px; font-size:14px;'>No new notifications</div>");
+					list.define({ autoheight:false, height:80 });
+        			list.resize();
 					this.app.callEvent("read:notifications");
-					this.$$("list").clearAll();
 				}
 			}
 		};
 	}
 	init(){
 		const list = this.$$("list");
-		//list.parse(getNotifications());
+		list.parse(getNotifications());
+
+		list.waitData.then(() => list.resize());
+
+		webix.extend(list,webix.OverlayBox);
 
 		this.on(this.app,"new:notification",() => {
+			list.hideOverlay();
 			list.add(newNotification(),0);
+			list.define({ autoheight:true });
+        	list.resize();
 		});
 	}
 	showWin(pos){

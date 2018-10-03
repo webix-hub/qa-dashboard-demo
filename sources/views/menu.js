@@ -7,7 +7,7 @@ export default class MenuView extends JetView {
 			width:150,
 			localId:"side:menu",
 			view:"sidebar",
-			css:theme,
+			css:theme + " webix_shadow_medium",
 			collapsed:true,
 			data:[
 				{ id:"qadashboard", value:"QA Dashboard", icon:"mdi mdi-cube" },

@@ -68,4 +68,5 @@ const tickets = [
 	{"id":63,"time":"4:30 AM","name":"Binding Filters to each other","status":"Open"},
 	{"id":64,"time":"12:35 AM","name":"Error: [DOM] Found 7 elements with non-unique id","status":"Complete"},
 	{"id":65,"time":"9:29 AM","name":"Datatable editing within multiview","status":"Complete"},
-	{"id":66,"time":"9:14 AM","name":"Dynamic load filtering doesnot work with custom request call to server","status":"Complete"}];
+	{"id":66,"time":"9:14 AM","name":"Dynamic load filtering doesnot work with custom request call to server","status":"Complete"}
+];
