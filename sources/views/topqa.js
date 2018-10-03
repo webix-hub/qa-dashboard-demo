@@ -54,6 +54,7 @@ export default class TopQAView extends JetView {
 		const dataview = this.$$("dataview");
 
 		dataview.parse(getQATeam());
+		dataview.select(1);
 
 		dataview.waitData.then(() => {
 			this._tooltip = webix.ui({
@@ -66,9 +67,7 @@ export default class TopQAView extends JetView {
 				webix.event(tasks[i],"mouseover",(e) => {
 					this._tooltip.show({ value:"Tasks completed" }, webix.html.pos(e));
 				});
-				webix.event(tasks[i],"mouseout",() => {
-					this._tooltip.hide();
-				});
+				webix.event(tasks[i],"mouseout",() => this._tooltip.hide());
 			}
 		});	
 	}
