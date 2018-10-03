@@ -65,11 +65,12 @@ path {
 	padding:10px;
 }
 .notifications .webix_list_item .m_title{
-	font-weight: 500;
+	font-weight:500;
+	color:#313131;
 }
 .notifications .webix_list_item .message{
 	display:block;
-	color:#94A1B3;
+	color:#475466;
 }
 /* iframes */
 .webix_view.ifr_template .webix_template{
