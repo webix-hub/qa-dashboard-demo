@@ -12,7 +12,7 @@ export default class MenuView extends JetView {
 			data:[
 				{ id:"qadashboard", value:"QA Dashboard", icon:"mdi mdi-cube" },
 				{ id:"widgets", value:"Widgets", icon:"mdi mdi-widgets" },
-				{ id:"demos", value:"Demos", icon:"mdi mdi-cellphone-link" },
+				{ id:"demos", value:"Demos", icon:"mdi mdi-monitor-dashboard" },
 				{ id:"prices", value:"Prices", icon:"mdi mdi-currency-usd" },
 				{ id:"tutorials", value:"Tutorials", icon:"mdi mdi-school" }
 			]
