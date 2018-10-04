@@ -29,7 +29,7 @@ export default class TopView extends JetView {
 										{
 											view:"icon",
 											icon:"mdi mdi-bell",
-											badge:5,
+											badge:3,
 											localId:"bell",
 											tooltip:"Open latest notifications",
 											click:function(){
