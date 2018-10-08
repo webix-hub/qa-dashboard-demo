@@ -4,7 +4,7 @@ import {getQATeam} from "models/qateam";
 export default class TopQAView extends JetView {
 	config(){
 		return {
-			gravity:2,
+			gravity:41,
 			rows:[
 				{
 					type:"header", template:"Top QA"
