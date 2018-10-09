@@ -44,7 +44,12 @@ export default class TopQAView extends JetView {
 								return "<span class='stars'>" + result + "</span>";
 							},
 							tasks:obj => `<span class="tasks">${obj.tasks}</span>`
-						}
+						},
+						// on:{
+						// 	onItemRender(){
+						// 		webix.message("resize");
+						// 	}
+						// }
 					}
 				}
 			]
@@ -56,19 +61,22 @@ export default class TopQAView extends JetView {
 		dataview.parse(getQATeam());
 		dataview.select(1);
 
-		dataview.waitData.then(() => {
-			this._tooltip = webix.ui({
-				view:"tooltip",
-				template:"#value#"
-			});
+		this._tooltip = webix.ui({
+			view:"tooltip",
+			template:"#value#"
+		});
 
-			let tasks = dataview.$view.querySelectorAll(".tasks");
-			for (let i = 0; i < tasks.length; i++){
-				webix.event(tasks[i],"mouseover",(e) => {
-					this._tooltip.show({ value:"Tasks completed" }, webix.html.pos(e));
-				});
-				webix.event(tasks[i],"mouseout",() => this._tooltip.hide());
-			}
-		});	
+		dataview.attachEvent("onAfterRender",() => this.relocaleTooltips());
+		dataview.attachEvent("onAfterSelect",() => this.relocaleTooltips());
+	}
+	relocaleTooltips(){
+		const dataview = this.$$("dataview");
+		let tasks = dataview.$view.querySelectorAll(".tasks");
+		for (let i = 0; i < tasks.length; i++){
+			webix.event(tasks[i],"mouseover",(e) => {
+				this._tooltip.show({ value:"Tasks completed" }, webix.html.pos(e));
+			});
+			webix.event(tasks[i],"mouseout",() => this._tooltip.hide());
+		}
 	}
 }
