@@ -9,7 +9,7 @@ export default class TopView extends JetView {
 			rows:[
 				{
 					view:"toolbar",
-					css:theme + " webix_shadow_medium",
+					css:theme,
 					height:56,
 					elements:[
 						{
