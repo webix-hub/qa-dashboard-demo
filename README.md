@@ -1,7 +1,7 @@
 Webix QA Dashboard (demo for the new skin)
 ===================
 
-Design is here: https://projects.invisionapp.com/d/main#/console/12386541/313827074/preview
+A dashboard for viewing the working progress of a QA team.
 
 ### How to run
 
