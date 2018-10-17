@@ -81,8 +81,6 @@ module.exports = function(env) {
 
 		out.library = pack.name.replace(/[^a-z0-9]/gi, "");
 		out.libraryTarget= "umd";
-		out.path = path.join(__dirname, "dist", sub);
-		out.publicPath = "/dist/"+sub+"/";
 	}
 
 	return config;
