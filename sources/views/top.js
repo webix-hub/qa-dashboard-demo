@@ -78,9 +78,11 @@ export default class TopView extends JetView {
 			this.$$("bell").refresh();
 
 			setTimeout(() => {
-				this.$$("bell").config.badge += 1;
-				this.$$("bell").refresh();
-				this.app.callEvent("new:notification");
+				if (this.app){
+					this.$$("bell").config.badge += 1;
+					this.$$("bell").refresh();
+					this.app.callEvent("new:notification");
+				}
 			},10000);
 		});
 	}
