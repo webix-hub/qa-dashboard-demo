@@ -29,7 +29,7 @@ export default class TicketsView extends JetView {
 						{
 							id:"status",
 							header:"Status",
-							fillspace:1,
+							width:120,
 							sort:"string",
 							editor:"combo",
 							tooltip:"Double-click to change the status",

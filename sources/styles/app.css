@@ -34,12 +34,17 @@
 .stars{
 	display:block;
 }
-.star_gold{
-	color:#FDBF4C;
+.star{
 	margin-right:-3px;
 }
-.star_grey{
+.star.gold{
+	color:#FDBF4C;
+}
+.star.grey, .star:hover ~ .star{
 	color:#94A1B3;
+}
+.star:hover{
+	color:#FFD700;
 }
 /* geochart */
 path {

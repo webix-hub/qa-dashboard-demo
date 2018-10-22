@@ -39,17 +39,18 @@ export default class TopQAView extends JetView {
 								let result = "";
 								for (let i = 1; i <= 5; i++){
 									let color = (i <= obj.stars) ? "gold" : "grey";
-									result += `<span class='webix_icon mdi mdi-star star_${color}'></span>`;
+									result += `<span class='webix_icon mdi mdi-star star ${color} ${i}'></span>`;
 								}
 								return "<span class='stars'>" + result + "</span>";
 							},
 							tasks:obj => `<span class="tasks">${obj.tasks}</span>`
 						},
-						// on:{
-						// 	onItemRender(){
-						// 		webix.message("resize");
-						// 	}
-						// }
+						onClick:{
+							"stars":function(ev, id){
+								this.updateItem(id,{stars:ev.target.classList[5]});
+								return false;
+							}
+						}
 					}
 				}
 			]
