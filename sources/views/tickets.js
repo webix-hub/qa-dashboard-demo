@@ -32,7 +32,7 @@ export default class TicketsView extends JetView {
 							header:"Status",
 							width:120,
 							sort:"string",
-							editor:"combo",
+							editor:"richselect",
 							tooltip:"Double-click to change the status",
 							options:[
 								"Open", "Pending", "Complete"
