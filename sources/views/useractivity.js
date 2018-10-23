@@ -4,7 +4,7 @@ import {getUserActivity} from "models/useractivity";
 export default class UserActivityView extends JetView {
 	config(){
 		return {
-			gravity:56,
+			gravity:5,
 			rows:[
 				{ type:"header", template:"User activity" },
 				{
