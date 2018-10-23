@@ -47,7 +47,7 @@ export default class TopQAView extends JetView {
 						},
 						onClick:{
 							"stars":function(ev, id){
-								this.updateItem(id,{stars:ev.target.classList[5]});
+								this.updateItem(id,{ stars:ev.target.classList[5] });
 								return false;
 							}
 						}

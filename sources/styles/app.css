@@ -33,17 +33,19 @@
 }
 .stars{
 	display:block;
+	width:90px;
+	margin-left:80px;
 }
 .star{
 	margin-right:-3px;
 }
-.star.gold{
+.stars .star.gold{
 	color:#FDBF4C;
 }
-.star.grey, .star:hover ~ .star{
+.stars .star.grey, .stars .star:hover ~ .star{
 	color:#94A1B3;
 }
-.star:hover{
+.stars .star:hover, .stars:hover .star{
 	color:#FFD700;
 }
 /* geochart */
