@@ -3,6 +3,10 @@ import {getQATeam} from "models/qateam";
 
 export default class TopQAView extends JetView {
 	config(){
+		this.minItemWidth = 243;
+		const initCount = Math.floor(document.documentElement.clientWidth / this.minItemWidth);
+		console.log(initCount);
+
 		return {
 			gravity:41,
 			rows:[
@@ -14,7 +18,8 @@ export default class TopQAView extends JetView {
 					body:{
 						view:"dataview",
 						localId:"dataview",
-						xCount:3,
+						xCount:(initCount > 4) ? 3 : ((initCount >= 0 && initCount <= 2) ? 1 : initCount-2),
+						minWidth:255,
 						select:true,
 						type:{
 							width:"auto", 
@@ -29,11 +34,9 @@ export default class TopQAView extends JetView {
 							},
 							userPic:obj => {
 								if (obj.photo)
-									return "<image class='userphoto' src='data/photos/"
-										+ obj.photo + ".jpg'>";
+									return "<image class='userphoto' src='data/photos/" + obj.photo + ".jpg'>";
 								else
-									return "<span class='userpic'>"
-										+ obj.name.charAt(0) + "</span>";
+									return "<span class='userpic'>" + obj.name.charAt(0) + "</span>";
 							},
 							stars:obj => {
 								let result = "";
@@ -62,6 +65,8 @@ export default class TopQAView extends JetView {
 		dataview.parse(getQATeam());
 		dataview.select(1);
 
+		window.addEventListener('resize', () => this.resizeDataview(this.minItemWidth));
+
 		this._tooltip = webix.ui({
 			view:"tooltip",
 			template:"#value#"
@@ -69,6 +74,11 @@ export default class TopQAView extends JetView {
 
 		dataview.attachEvent("onAfterRender",() => this.relocaleTooltips());
 		dataview.attachEvent("onAfterSelect",() => this.relocaleTooltips());
+	}
+	resizeDataview(minItemWidth){
+		const elements = Math.floor(this.$$("dataview").$width / minItemWidth);
+		const count = (elements > 3) ? 3 : ((elements == 0) ? 1 : elements);
+		this.$$("dataview").define("xCount", count);
 	}
 	relocaleTooltips(){
 		const dataview = this.$$("dataview");

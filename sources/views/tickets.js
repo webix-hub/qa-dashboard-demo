@@ -10,6 +10,7 @@ export default class TicketsView extends JetView {
 				{
 					view:"datatable",
 					localId:"datatable",
+					minWidth:390,
 					select:true,
 					editable:true,
 					editaction:"dblclick",
@@ -21,7 +22,7 @@ export default class TicketsView extends JetView {
 						{
 							id:"name",
 							header:"Bug",
-							fillspace:4,
+							fillspace:3,
 							sort:"string",
 							editor:"text",
 							tooltip:"Double-click for a spelling atonement"
