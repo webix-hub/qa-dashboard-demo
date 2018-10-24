@@ -61,7 +61,7 @@ export default class TopQAView extends JetView {
 		dataview.parse(getQATeam());
 		dataview.select(1);
 
-		window.addEventListener('resize', () => this.resizeDataview(this.minItemWidth));
+		this._winresize = webix.event(window, 'resize', () => this.resizeDataview(this.minItemWidth));
 
 		this._tooltip = webix.ui({
 			view:"tooltip",
@@ -87,5 +87,8 @@ export default class TopQAView extends JetView {
 			});
 			webix.event(tasks[i],"mouseout",() => this._tooltip.hide());
 		}
+	}
+	destroy(){
+		webix.eventRemove(this._winresize);
 	}
 }
