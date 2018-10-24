@@ -38,6 +38,7 @@
 }
 .star{
 	margin-right:-3px;
+	cursor:pointer;
 }
 .stars .star.gold{
 	color:#FDBF4C;
