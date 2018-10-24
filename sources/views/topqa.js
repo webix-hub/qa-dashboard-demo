@@ -61,7 +61,7 @@ export default class TopQAView extends JetView {
 		dataview.parse(getQATeam());
 		dataview.select(1);
 
-		this._winresize = webix.event(window, 'resize', () => this.resizeDataview(this.minItemWidth));
+		this._winresize = webix.event(window, "resize", () => this.resizeDataview(this.minItemWidth));
 
 		this._tooltip = webix.ui({
 			view:"tooltip",

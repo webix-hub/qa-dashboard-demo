@@ -32,7 +32,7 @@ export default class NotificationsView extends JetView {
 					list.clearAll();
 					list.showOverlay("<div style='margin:20px; font-size:14px;'>No new notifications</div>");
 					list.define({ autoheight:false, height:80 });
-        			list.resize();
+					list.resize();
 					this.app.callEvent("read:notifications");
 				}
 			}
@@ -50,7 +50,7 @@ export default class NotificationsView extends JetView {
 			list.hideOverlay();
 			list.add(newNotification(),0);
 			list.define({ autoheight:true });
-        	list.resize();
+			list.resize();
 		});
 	}
 	showWin(pos){
