@@ -13,6 +13,10 @@ export default class MyApp extends JetApp{
 		};
 
 		super({ ...defaults, ...config });
+
+		this.attachEvent("app:error:resolve", function(err, url) {
+			webix.delay(() => this.show("/top/qadashboard"));
+		});
 	}
 }
 
