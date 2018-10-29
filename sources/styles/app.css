@@ -37,8 +37,9 @@
 	margin-left:80px;
 }
 .star{
-	margin-right:-3px;
+	margin-right:-3px !important;
 	cursor:pointer;
+	font-size:16px !important;
 }
 .stars .star.gold{
 	color:#FDBF4C;
