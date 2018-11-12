@@ -9,7 +9,7 @@ export default class MyApp extends JetApp{
 			router 	: HashRouter,
 			debug 	: !PRODUCTION,
 			start 	: "/top/qadashboard",
-			theme	: webix.storage.local.get("theme_qadashboard") || ""
+			theme	: window.localStorage ? (webix.storage.local.get("theme_qadashboard") || "") : ""
 		};
 
 		super({ ...defaults, ...config });
