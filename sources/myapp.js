@@ -3,13 +3,20 @@ import {JetApp, HashRouter} from "webix-jet";
 
 export default class MyApp extends JetApp{
 	constructor(config){
+		let theme = "";
+		try{
+			theme = webix.storage.local.get("theme_qadashboard");
+		}
+		catch(err){
+			webix.message("You blocked cookies. The theme won't be restored after page reloads.","debug");
+		}
 		const defaults = {
 			id		: APPNAME,
 			version : VERSION,
 			router 	: HashRouter,
 			debug 	: !PRODUCTION,
 			start 	: "/top/qadashboard",
-			theme	: window.localStorage ? (webix.storage.local.get("theme_qadashboard") || "") : ""
+			theme	: theme || ""
 		};
 
 		super({ ...defaults, ...config });

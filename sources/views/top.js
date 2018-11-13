@@ -45,7 +45,10 @@ export default class TopView extends JetView {
 											click:function(){
 												let color = this.config.color;
 												color = !color ? "webix_dark" : "";
-												webix.storage.local.put("theme_qadashboard",color);
+												try{
+													webix.storage.local.put("theme_qadashboard",color);
+												}
+												catch(err){/* for blocked cookies */}
 												this.$scope.app.config.theme = color;
 												this.$scope.app.refresh();
 											}
