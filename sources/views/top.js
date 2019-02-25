@@ -23,7 +23,7 @@ export default class TopView extends JetView {
 											click:() => this.app.callEvent("menu:toggle")
 										},
 										{
-											view:"label", template:"QA Dashboard"
+											view:"label", label:"QA Dashboard", css:"header_label"
 										},
 										{},
 										{
@@ -41,6 +41,7 @@ export default class TopView extends JetView {
 											view:"icon",
 											localId:"themes",
 											icon:"mdi mdi-invert-colors",
+											tooltip:theme ? "Come back to the light side of the Force" : "Come to the dark side",
 											color:theme,
 											click:function(){
 												let color = this.config.color;
@@ -71,10 +72,6 @@ export default class TopView extends JetView {
 	}
 	init(){
 		this.notifications = this.ui(NotificationsView);
-
-		const theme = this.app.config.theme;
-		this.$$("themes").config.tooltip = theme ? "Come back to the light side of the Force" : "Come to the dark side";
-		this.$$("themes").refresh();
 
 		this.on(this.app,"read:notifications",() => {
 			this.$$("bell").config.badge = 0;

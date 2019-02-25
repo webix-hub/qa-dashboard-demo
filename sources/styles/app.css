@@ -88,3 +88,7 @@ path {
 .webix_view.ifr_template > .webix_disabled{
 	opacity:1 !important;
 }
+/* toolbar */
+.header_label .webix_el_box{
+	font-size:16px;
+}
