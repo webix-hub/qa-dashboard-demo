@@ -13,7 +13,7 @@ export default class UserActivityView extends JetView {
 							view:"geochart",
 							localId:"geo",
 							borderless:true,
-							// provide your own Google API key 
+							// provide your own Google API key
 							// https://developers.google.com/maps/documentation/javascript/get-api-key
 							key:"AIzaSyAi0oVNVO-e603aUY8SILdD4v9bVBkmiTg",
 							chart:{

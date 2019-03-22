@@ -19,7 +19,7 @@ export default class TopQAView extends JetView {
 					minWidth:255,
 					select:true,
 					type:{
-						width:"auto", 
+						width:"auto",
 						height:104,
 						type:"tiles",
 						template:(obj,common) => {
